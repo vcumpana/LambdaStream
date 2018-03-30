@@ -4,14 +4,25 @@ import java.util.List;
 
 public class Student extends User{
 
-    public Major[] getMajors() {
-        return majors;
+    private Major major;
+
+    public Student(String name, Gender gender, int age, Major major) {
+        super(name, gender, age);
+        this.major = major;
     }
 
-    private Major[] majors;
+    public Major getMajor() {
+        return major;
+    }
 
-    public Student(String name, Gender gender, int age, Major...majors) {
-        super(name, gender, age);
-        this.majors = majors;
+    @Override
+    public String toString() {
+        return  "Student{" +"name='" + name + '\'' +
+                ", gender=" + gender +
+                ", age=" + age +
+                ", major=" + major.getName() +
+                ", score=" + major.getScore() +
+                ", age=" + age +
+                '}';
     }
 }

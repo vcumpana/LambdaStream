@@ -1,9 +1,9 @@
 package com.endava.models;
 
 public class User {
-    private String name;
-    private Gender gender;
-    int age;
+    protected String name;
+    protected Gender gender;
+    protected int age;
 
     public User(String name, Gender gender, int age) {
         this.name = name;

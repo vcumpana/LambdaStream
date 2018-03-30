@@ -1,6 +1,16 @@
 package com.endava.models;
 
 public class Major {
+
+
+    private String name;
+    private int score;
+
+    public Major(String name, int score) {
+        this.name = name;
+        this.score = score;
+    }
+
     public String getName() {
         return name;
     }
@@ -9,19 +19,19 @@ public class Major {
         this.name = name;
     }
 
-    public Double getScore() {
+    public int getScore() {
         return score;
     }
 
-    public void setScore(Double score) {
+    public void setScore(int score) {
         this.score = score;
     }
 
-    private String name;
-    private Double score;
-
-    public Major(String name, Double score) {
-        this.name = name;
-        this.score = score;
+    @Override
+    public String toString() {
+        return "Major{" +
+                "name='" + name + '\'' +
+                ", score=" + score +
+                '}';
     }
 }
